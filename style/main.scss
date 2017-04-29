@@ -1,0 +1,205 @@
+@import "grid";
+@import "ripple";
+@import "color";
+//containers:
+
+
+
+@mixin linearGradient($top, $bottom) {
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top, $top 0%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $top 0%, $bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $top 0%, $bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $top 0%, $bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=0); /* IE6-9 */
+}
+
+@mixin bgGradient($top, $bottom) {
+  background: $top;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, $top), color-stop(100%, $bottom));
+  background-image: -webkit-radial-gradient($top, $bottom);
+  background-image: -moz-radial-gradient($top, $bottom);
+  background-image: -o-radial-gradient($top, $bottom);
+  background-image: radial-gradient($top, $bottom);
+  color:white;
+  a{
+    color:$grey-0-0;
+    text-shadow: $grey-2-1 1px 1px 1px;
+    text-decoration: none;
+    &:hover{
+      color: $grey-2-1;
+      text-shadow: $grey-0-0 1px 1px 1px;
+    }
+  }
+}
+@mixin bgGradientDark($top, $bottom) {
+  background: $top;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, $top), color-stop(100%, $bottom));
+  background-image: -webkit-radial-gradient($top, $bottom);
+  background-image: -moz-radial-gradient($top, $bottom);
+  background-image: -o-radial-gradient($top, $bottom);
+  background-image: radial-gradient($top, $bottom);
+  color:black;
+}
+
+.bg-blue-0 {
+  @include bgGradient($blue-0-0, $blue-0-1);
+}
+
+.bg-blue-1 {
+  @include bgGradient($blue-1-0, $blue-1-1);
+}
+
+.bg-blue-2 {
+  @include bgGradient($blue-2-0, $blue-2-1);
+}
+
+.bg-blue-3 {
+  @include bgGradient($blue-3-0, $blue-3-1);;
+}
+
+.bg-blue-4 {
+  @include bgGradient($blue-4-0, $blue-4-1);
+}
+.bg-purple-0 {
+  @include bgGradient($purple-0-0, $purple-0-1);
+}
+
+.bg-purple-1 {
+  @include bgGradient($purple-1-0, $purple-1-1);
+}
+
+.bg-purple-2 {
+  @include bgGradient($purple-2-0, $purple-2-1);
+}
+.bg-purple-3 {
+  @include bgGradient($purple-3-0, $purple-3-1);
+}
+.bg-red-orange-0{
+  @include bgGradient($orange-0-0,$red-0-0);
+}
+.bg-red-orange-1{
+  @include bgGradient( $orange-0-1,$red-0-1);
+}
+.bg-red-blue-0{
+  @include bgGradient( $blue-3-0,$red-0-1);
+}
+.bg-red-blue-1{
+  @include bgGradient( $blue-3-1,$red-0-1);
+}
+.bg-lila-blue-0{
+  @include bgGradient(  $blue-3-0,$purple-3-0);
+}
+
+.bg-grey-0 {
+  @include bgGradientDark($grey-0-0, $grey-0-1);
+}
+
+.bg-grey-1 {
+  @include bgGradient($grey-1-0, $grey-1-1);
+}
+
+.bg-grey-2 {
+  @include bgGradient($grey-2-0, $grey-2-1);
+}
+
+
+
+.bg-shadow-0{
+  box-shadow: $grey-2-1 0 0 1px;
+}
+.bg-shadow-1{
+  box-shadow: $grey-2-1 0 0 3px;
+}
+.bg-shadow-2{
+  box-shadow: $grey-2-1 0 0 5px;
+}
+.bg-shadow-3{
+  box-shadow: $grey-2-1 1px 1px 5px;
+}
+.bg-shadow-4{
+  box-shadow: $grey-2-1 3px 3px 5px;
+}
+.bg-shadow-5{
+  box-shadow: $grey-2-1 3px 3px 10px;
+}
+.bg-shadow-6{
+  box-shadow: $grey-2-1 1px 1px 15px;
+}
+.margin{
+  margin:15px;
+}
+
+
+
+.button{
+  display: inline-block;
+  position: relative;
+  border: none;
+  outline:none;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.fab{
+  border-radius: 50%;
+  margin:0;
+  padding: 20px;
+}
+
+.material{
+  position:relative;
+  color:white;
+  margin: 20px auto;
+  height:400px;
+  width:500px;
+  background:#f45673;
+}
+
+.ripple{
+  overflow:hidden;
+}
+
+.ripple-effect{
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;
+
+
+  animation: ripple-animation 2s;
+}
+
+
+@keyframes ripple-animation {
+  from {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(100);
+    opacity: 0;
+  }
+}
+.image-container{
+  img:hover{
+    @include bgGradient($blue-0-0, $blue-0-1);
+    box-shadow: $grey-2-1 0 0 1px;
+
+  }
+}
+.slabo-font{
+  font-family: 'Slabo 27px', serif;
+}
+#game{
+  width:100%;
+  overflow:hidden;
+}
+.font-s-24{
+  font-size: 24px;
+}

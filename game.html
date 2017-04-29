@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Canvas Game</title>
+
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/game.css">
+</head>
+<body id="game" class="bg-grey-0 col-lg-12 center slabo-font">
+
+
+<main>
+    <div class="col-lg-12 center">
+        <div class="image-container center padding-bottom-2 padding-top-2 playerContainer">
+            <img src="img/druplicon.png" class="col-sm-1 ripple dark circle visible" alt="druplicon" text="druplicon">
+            <img src="img/druplicon-catwoman.png" class="hidden" alt="druplicon-catwoman">
+            <div class="text-container col-lg-2">
+                <div id="druplicon-text" class="visible">
+                    <h3> About Druplicon: </h3>
+                    <p>Hi :)</p>
+                    <p>I am the logo of Drupal. As Drupal is the English spelling of the dutch <i>Druppel</i> for <i>water</i>
+                        drop my shape is the one of such a drop. And my eyes too show two melting drops resembling an
+                        infinity
+                        symbol. </p>
+                    <p>My best friends are the Drupal Heroes: Iron Man, Cat Woman, Hulk, Batman, Spiderman....</p>
+                    <p>People like to make crazy stuff with me e.g. build gorgeous Lego statues, haman wearable
+                        costumes, bake
+                        cakes, muffins and many more.</p>
+                    <p>So you see: I am pretty famous 😅😎</p>
+                </div>
+            </div>
+            <img src="img/persons/woman_0.png" class="col-sm-1 ripple circle dark" alt="girl" text="girl">
+            <img src="img/persons/woman_1.png" class="hidden" alt="girl">
+            <div class="text-container col-lg-2">
+                <div id="girl-text" class="hidden">
+                    <h3> About girl: </h3>
+
+                </div>
+            </div>
+            <img src="img/persons/male_0.png" class="col-sm-1 ripple circle dark" alt="boy" text="boy">
+            <img src="img/persons/male_1.png" class="hidden" alt="druplicon">
+            <div class="text-container col-lg-2">
+                <div id="boy-text" class="hidden">
+                    <h3> About boy: </h3>
+
+                </div>
+            </div>
+            <img src="img/persons/woman_2.png" class="col-sm-1 ripple circle dark" alt="woman"
+                 text="woman">
+            <img src="img/persons/woman_3.png" class="hidden" alt="druplicon">
+            <div class="text-container col-lg-2">
+                <div id="woman-text" class="hidden">
+                    <h3> About woman: </h3>
+                </div>
+            </div>
+
+            <img src="img/persons/man_2.png" class="col-sm-1 ripple circle dark" alt="policeman" text="policeman">
+            <img src="img/persons/man_3.png" class="hidden" alt="man">
+            <div class="text-container col-lg-2">
+                <div id="policeman-text" class="hidden">
+                    <h3> About Me: </h3>
+
+                </div>
+            </div>
+        </div>
+
+        <img src="img/mountains.jpg" class=" game-bg hidden" alt="beach">
+
+    </div>
+
+    <div class="buttongroup col-lg-11 controllCanvas">
+        <div class="row">
+            <span class="moveUp ripple bg-shadow-1 bg-blue-4 button">UP</span>
+        </div>
+        <div class="row">
+            <span class="moveLeft ripple bg-shadow-1 bg-blue-4 button">LEFT</span>
+            <span class="moveRight ripple bg-shadow-1 bg-blue-4 button">RIGHT</span>
+        </div>
+        <div class="row">
+            <span class="moveDown ripple bg-shadow-1 bg-blue-4 button">DOWN</span>
+        </div>
+        <div class="row">
+            <span class="moveStop ripple bg-shadow-1 bg-red-orange-0 button up">Stop</span>
+            <span class="movePlay ripple bg-shadow-1 bg-red-orange-0 button up hidden">Play</span>
+            <span class="moveReset ripple bg-shadow-1  bg-red-orange-0 button up">Reset</span>
+        </div>
+
+
+    </div>
+
+
+</main>
+<script src="js/game.js" type="text/javascript"></script>
+<script src="js/ripple.js" type="text/javascript"></script>
+</body>
+</html>
